@@ -8,7 +8,6 @@ import { useStaticQuery, graphql } from "gatsby"
 const getTours = graphql`
   query {
     featuredTours: allContentfulTour(filter: { featured: { eq: true } }) {
-      totalCount
       edges {
         node {
           name
@@ -19,7 +18,7 @@ const getTours = graphql`
           days
           images {
             fluid {
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid
             }
           }
         }
