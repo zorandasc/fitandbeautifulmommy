@@ -15,6 +15,7 @@ module.exports = {
     description:
       "Explore awsome wordwide tout and discover what make each travel",
     author: "@johndoe",
+    siteUrl: "https://kind-morse-9d7b29.netlify.com",
   },
   plugins: [
     {
@@ -29,6 +30,8 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-playground`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -37,5 +40,24 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://kind-morse-9d7b29.netlify.com",
+        sitemap: "https://kind-morse-9d7b29.netlify.com/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `BackRoads`,
+        short_name: `BackRoads`,
+        start_url: `/`,
+        display: `browser`,
+        icon: `src/images/icon.jpg`,
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 }
