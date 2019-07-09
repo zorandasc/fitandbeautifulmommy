@@ -1,9 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
-import StyledHero from "../components/StyledHero"
 import styles from "../css/single-blog.module.css"
-import Img from "gatsby-image"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import SEO from "../components/SEO"
@@ -35,6 +33,7 @@ const BlogTemplate = ({ data }) => {
             <img
               width="400"
               src={node.data.target.fields.file["en-US"].url}
+              alt="blog"
             ></img>
           </div>
         )
