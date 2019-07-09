@@ -45,6 +45,7 @@ const Navbar = () => {
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="socials links"
               >
                 {item.icon}
               </a>
