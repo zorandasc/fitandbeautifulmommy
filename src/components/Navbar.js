@@ -16,7 +16,12 @@ const Navbar = () => {
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
           <img src={logo} alt="backroads logo"></img>
-          <button type="button" className={styles.logoBtn} onClick={toggleNav}>
+          <button
+            aria-label="hamburger menu"
+            type="button"
+            className={styles.logoBtn}
+            onClick={toggleNav}
+          >
             <FaAlignRight className={styles.logoIcon}></FaAlignRight>
           </button>
         </div>
