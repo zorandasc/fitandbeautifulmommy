@@ -9,7 +9,7 @@ export default class tours extends Component {
   render() {
     return (
       <Layout>
-        <SEO title="Tours"></SEO>
+        <SEO title="Recipes"></SEO>
         <StyledHero
           img={this.props.data.defaultBcg.childImageSharp.fluid}
         ></StyledHero>

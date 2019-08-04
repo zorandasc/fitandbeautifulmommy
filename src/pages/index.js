@@ -3,7 +3,7 @@ import Layout from "../components/Layout"
 import Banner from "../components/Banner"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import About from "../components/Home/About"
-import Services from "../components/Home/Services"
+
 import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
 import FeaturedTours from "../components/Home/FeaturedTours"
@@ -23,7 +23,7 @@ export default ({ data }) => (
       </Banner>
     </StyledHero>
     <About></About>
-    <Services></Services>
+    <FeaturedTours></FeaturedTours>
     <FeaturedTours></FeaturedTours>
   </Layout>
 )

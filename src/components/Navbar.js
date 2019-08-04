@@ -3,8 +3,8 @@ import styles from "../css/navbar.module.css"
 import { FaAlignRight } from "react-icons/fa"
 import links from "../constants/links"
 import socialIcons from "../constants/social-icons"
-import logo from "../images/logo.svg"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import logo from "../images/optimised.svg"
 
 const Navbar = () => {
   const [isOpen, setNav] = useState(false)

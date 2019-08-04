@@ -5,15 +5,11 @@ export default [
   },
   {
     path: "/tours",
-    text: "tours",
+    text: "recipes",
   },
   {
     path: "/blog",
     text: "blog",
-  },
-  {
-    path: "/blogs",
-    text: "blogs",
   },
   {
     path: "/contact",

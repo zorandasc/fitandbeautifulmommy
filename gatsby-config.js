@@ -11,11 +11,11 @@ require("dotenv").config({
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "BackRoads",
+    title: "FitandBeautifulmommy",
     description:
       "Explore awsome wordwide tout and discover what make each travel",
     author: "@johndoe",
-    siteUrl: "https://kind-morse-9d7b29.netlify.com",
+    siteUrl: "https://fitandbeautifulmommy.com",
   },
   plugins: [
     {
@@ -43,19 +43,19 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://kind-morse-9d7b29.netlify.com",
-        sitemap: "https://kind-morse-9d7b29.netlify.com/sitemap.xml",
+        host: "https://fitandbeautifulmommy.com",
+        sitemap: "https://fitandbeautifulmommy.com/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `BackRoads`,
-        short_name: `BackRoads`,
+        name: `FitandBeautifulmommy`,
+        short_name: `FitandBeautifulmommy`,
         start_url: `/`,
         background_color: `#f7f7f7`,
-        theme_color: `#3fd0d4`,
+        theme_color: `#d13885`,
         display: `standalone`,
         icon: `src/images/icon.jpg`,
       },
