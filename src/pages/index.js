@@ -18,7 +18,7 @@ export default ({ data }) => (
         info=" Loren isp[om loren ipsum loren ipsum loren ipsum"
       >
         <AniLink fade to="/tours" className="btn-white">
-          explore tours
+          explore recipes
         </AniLink>
       </Banner>
     </StyledHero>
@@ -30,7 +30,7 @@ export default ({ data }) => (
 
 export const query = graphql`
   query {
-    defaultBcg: file(relativePath: { eq: "defaultBcg.jpeg" }) {
+    defaultBcg: file(relativePath: { eq: "table.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp
