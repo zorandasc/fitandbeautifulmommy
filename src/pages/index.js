@@ -15,7 +15,7 @@ export default ({ data }) => (
     <StyledHero home="true" img={data.defaultBcg.childImageSharp.fluid}>
       <Banner
         title="continue exploring"
-        info=" Loren isp[om loren ipsum loren ipsum loren ipsum"
+        info="Explore and discover awsome wordwide food, lifestyle and blogs for fit and beautiful mommies"
       >
         <AniLink fade to="/tours" className="btn-white">
           explore recipes
