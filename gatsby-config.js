@@ -14,7 +14,7 @@ module.exports = {
     title: "FitandBeautifulmommy",
     description:
       "Explore and discover awsome wordwide food, lifestyle and blogs for fit and beautiful mommies",
-    author: "@johndoe",
+    author: "@zorandsc",
     siteUrl: "https://fitandbeautifulmommy.com",
   },
   plugins: [
