@@ -14,9 +14,7 @@ const StyledHero = ({ img, children, className, home }) => {
 export default styled(StyledHero)`
   min-height: ${props => (props.home ? "calc(100vh)" : "50vh")};
   background: ${props =>
-    props.home
-      ? "linear-gradient(rgba(209,56,133,0.3), rgba(209,56,133,0.3))"
-      : "none"};
+    props.home ? "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7))" : "none"};
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
