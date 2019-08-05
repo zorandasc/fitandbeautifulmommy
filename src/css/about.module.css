@@ -1,5 +1,4 @@
 .about {
-  background: var(--mainGrey);
   padding: 4rem 0;
 }
 .about-center {
@@ -49,7 +48,9 @@
     max-height: 500px;
   }
   .about-info p {
-    width: 80%;
+    width: 100%;
+    word-spacing: 0.2rem;
+    line-height: 2rem;
   }
 }
 @media screen and (min-width: 992px) {
