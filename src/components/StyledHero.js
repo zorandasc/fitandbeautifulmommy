@@ -15,10 +15,12 @@ export default styled(StyledHero)`
   min-height: ${props => (props.home ? "calc(100vh)" : "50vh")};
   background: ${props =>
     props.home
-      ? "linear-gradient(rgba(209,56,133,0.3), rgba(0,0,0,0.3))"
+      ? "linear-gradient(rgba(209,56,133,0.3), rgba(209,56,133,0.3))"
       : "none"};
   background-position: center;
+  background-attachment: fixed;
   background-size: cover;
+  background-repeat: no-repeat;
   opacity: 1 !important;
   display: flex;
   justify-content: center;
