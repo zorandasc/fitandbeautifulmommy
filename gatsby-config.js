@@ -13,7 +13,7 @@ module.exports = {
   siteMetadata: {
     title: "FitandBeautifulmommy",
     description:
-      "Explore awsome wordwide tout and discover what make each travel",
+      "Explore and discover awsome wordwide food, lifestyle and blogs for fit and beautiful mommies",
     author: "@johndoe",
     siteUrl: "https://fitandbeautifulmommy.com",
   },
