@@ -35,11 +35,14 @@ const About = () => {
         <article className={styles.aboutInfo}>
           <h4>who are we</h4>
           <p>
-            Our goal is not trying to reinvent the wheel or try to teach you how
-            should you live your life, because in the end we are like you,
-            somebody wife, sister, lover, and mommy trying to get most of what
-            we have. Our goals is to share some of our success blogs stories,
-            tasty and interesting recipes and lifetime experience.
+            Eating and making healthy food, staying in shape, parenting,
+            overcoming marriage and work hurdles at the same time, often may
+            seem like impossible task. Our goal is not trying to reinvent wheels
+            or tray to teach you how should you live your life, because in the
+            end we are like you, somebody wife, sister, lover, or mommy. And
+            even if you are not like us we hope you can appreciate our goals of
+            overcoming everyday hurdles trough our blogs stories, tasty and
+            interesting recipes and lifetime experience.
           </p>
 
           <button type="button" className="btn-primary">
