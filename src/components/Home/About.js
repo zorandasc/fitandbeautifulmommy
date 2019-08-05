@@ -37,9 +37,9 @@ const About = () => {
           <p>
             Our goal is not trying to reinvent the wheel or try to teach you how
             should you live your life, because in the end we are like you,
-            someone wife, sister, lover, and mommy trying to get most of what we
-            have. Our goals is to share some of our success blogs stories, tasty
-            and interesting recipes and lifetime experience.
+            somebody wife, sister, lover, and mommy trying to get most of what
+            we have. Our goals is to share some of our success blogs stories,
+            tasty and interesting recipes and lifetime experience.
           </p>
 
           <button type="button" className="btn-primary">
