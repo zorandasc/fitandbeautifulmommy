@@ -14,7 +14,7 @@ export default ({ data }) => (
     <SEO title="Home" description="this is home description"></SEO>
     <StyledHero home="true" img={data.defaultBcg.childImageSharp.fluid}>
       <Banner
-        title="continue exploring"
+        title="exploring unknown"
         info="Explore and discover awsome wordwide food, lifestyle and blogs for fit and beautiful mommies"
       >
         <AniLink fade to="/tours" className="btn-white">
@@ -22,8 +22,8 @@ export default ({ data }) => (
         </AniLink>
       </Banner>
     </StyledHero>
-    <About></About>
     <FeaturedTours></FeaturedTours>
+    <About></About>
     <FeaturedTours></FeaturedTours>
   </Layout>
 )
