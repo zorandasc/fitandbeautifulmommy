@@ -37,9 +37,9 @@ const About = () => {
           <p>
             Eating and making healthy food, staying in shape, parenting,
             overcoming marriage and work hurdles at the same time, often may
-            seem like impossible task. Our goal is not trying to reinvent wheels
-            or tray to teach you how should you live your life, because in the
-            end we are like you, somebody wife, sister, lover, or mommy. And
+            seem like impossible task. Our goal is not trying to reinvent the
+            wheel or try to teach you how should you live your life, because in
+            the end we are like you, somebody wife, sister, lover, or mommy. And
             even if you are not like us we hope you can appreciate our goals of
             overcoming everyday hurdles trough our blogs stories, tasty and
             interesting recipes and lifetime experience.

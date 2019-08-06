@@ -1,4 +1,5 @@
 .blog {
+  background: var(--mainWhite);
   box-shadow: var(--lightShadow);
   transition: var(--mainTransition);
 }

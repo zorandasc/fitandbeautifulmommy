@@ -7,6 +7,7 @@ import About from "../components/Home/About"
 import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
 import FeaturedTours from "../components/Home/FeaturedTours"
+import RecentBlogs from "../components/Home/ReacentBlogs"
 import SEO from "../components/SEO"
 
 export default ({ data }) => (
@@ -23,8 +24,8 @@ export default ({ data }) => (
       </Banner>
     </StyledHero>
     <FeaturedTours></FeaturedTours>
+    <RecentBlogs></RecentBlogs>
     <About></About>
-    <FeaturedTours></FeaturedTours>
   </Layout>
 )
 
