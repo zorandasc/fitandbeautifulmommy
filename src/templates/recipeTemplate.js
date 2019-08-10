@@ -7,7 +7,7 @@ import Img from "gatsby-image"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import SEO from "../components/SEO"
 
-const Template = ({ data }) => {
+const RecipeTemplate = ({ data }) => {
   const {
     name,
     time,
@@ -74,4 +74,4 @@ export const query = graphql`
   }
 `
 
-export default Template
+export default RecipeTemplate
