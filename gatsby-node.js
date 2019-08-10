@@ -4,14 +4,14 @@ exports.createPages = async function({ graphql, actions }) {
   const { createPage } = actions
   const { data } = await graphql(`
     query {
-      tours: allContentfulTour {
+      recipes: allContentfulRecipes {
         edges {
           node {
             slug
           }
         }
       }
-      posts: allContentfulPost {
+      posts: allContentfulPosts {
         edges {
           node {
             slug
@@ -21,9 +21,9 @@ exports.createPages = async function({ graphql, actions }) {
     }
   `)
 
-  data.tours.edges.forEach(({ node }) => {
+  data.recipes.edges.forEach(({ node }) => {
     createPage({
-      path: `tours/${node.slug}`,
+      path: `recipes/${node.slug}`,
       component: path.resolve("./src/templates/template.js"),
       context: {
         slug: node.slug,

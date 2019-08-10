@@ -8,7 +8,7 @@ import SEO from "../components/SEO"
 
 export const query = graphql`
   query getPost($slug: String!) {
-    post: contentfulPost(slug: { eq: $slug }) {
+    post: contentfulPosts(slug: { eq: $slug }) {
       title
       published(formatString: "MMMM Do, YYYY")
       text {

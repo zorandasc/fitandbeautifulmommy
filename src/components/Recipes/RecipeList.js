@@ -1,18 +1,18 @@
 import React, { Component } from "react"
 import styles from "../../css/items.module.css"
-import Tour from "./Tour"
+import Recipe from "./Recipe"
 import Title from "../Title"
 
-export default class TourList extends Component {
+export default class RecipeList extends Component {
   state = {
-    tours: [],
-    sortedTours: [],
+    recipes: [],
+    sortedRecipes: [],
   }
 
   componentDidMount() {
     this.setState({
-      tours: this.props.tours.edges,
-      sortedTours: this.props.tours.edges,
+      recipes: this.props.recipes.edges,
+      sortedRecipes: this.props.recipes.edges,
     })
   }
 
@@ -21,8 +21,8 @@ export default class TourList extends Component {
       <section className={styles.tours}>
         <Title title="our" subtitle="recipes"></Title>
         <div className={styles.center}>
-          {this.state.sortedTours.map(({ node }) => {
-            return <Tour key={node.contentful_id} tour={node} />
+          {this.state.sortedRecipes.map(({ node }) => {
+            return <Recipe key={node.contentful_id} recipe={node} />
           })}
         </div>
       </section>

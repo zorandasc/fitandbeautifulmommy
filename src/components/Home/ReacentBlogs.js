@@ -7,7 +7,7 @@ import BlogCard from "../../components/Blog/BlogCard"
 
 const getPosts = graphql`
   query {
-    posts: allContentfulPost(
+    posts: allContentfulPosts(
       sort: { fields: published, order: DESC }
       limit: 3
     ) {
@@ -17,7 +17,7 @@ const getPosts = graphql`
           slug
           title
           id: contentful_id
-          image {
+          images {
             fluid {
               ...GatsbyContentfulFluid
             }

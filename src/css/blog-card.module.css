@@ -55,7 +55,8 @@
   left: 0;
   top: 75%;
   background: var(--primaryColor);
-  padding: 0.3rem 0.5rem;
+  color: var(--offWhite);
+  padding: 0.4rem 0.5rem;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }

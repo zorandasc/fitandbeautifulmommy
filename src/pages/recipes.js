@@ -2,10 +2,10 @@ import React, { Component } from "react"
 import Layout from "../components/Layout"
 import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
-import Tours from "../components/Tours/Tours"
+import Recipes from "../components/Recipes/Recipes"
 import SEO from "../components/SEO"
 
-export default class tours extends Component {
+export default class recipes extends Component {
   render() {
     return (
       <Layout>
@@ -13,7 +13,7 @@ export default class tours extends Component {
         <StyledHero
           img={this.props.data.defaultBcg.childImageSharp.fluid}
         ></StyledHero>
-        <Tours></Tours>
+        <Recipes></Recipes>
       </Layout>
     )
   }

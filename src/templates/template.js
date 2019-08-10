@@ -4,24 +4,19 @@ import Layout from "../components/Layout"
 import StyledHero from "../components/StyledHero"
 import styles from "../css/template.module.css"
 import Img from "gatsby-image"
-import { FaMoneyBillWave, FaMap } from "react-icons/fa"
-import Day from "../components/SingleTour/Day"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import SEO from "../components/SEO"
 
 const Template = ({ data }) => {
   const {
     name,
-    price,
-    country,
-    days,
+    time,
+    type,
+    ingredients: { ingredients },
     description: { description },
     images,
-    start,
-    journey,
-  } = data.tour
-
-  const [mainImage, ...tourImages] = images
+  } = data.recipe
+  const [mainImage, ...recipeImages] = images
 
   return (
     <Layout>
@@ -30,7 +25,7 @@ const Template = ({ data }) => {
       <section className={styles.template}>
         <div className={styles.center}>
           <div className={styles.images}>
-            {tourImages.map((item, index) => {
+            {recipeImages.map((item, index) => {
               return (
                 <Img
                   key={index}
@@ -42,27 +37,15 @@ const Template = ({ data }) => {
             })}
           </div>
           <h2>{name}</h2>
-          <div className={styles.info}>
-            <p>
-              <FaMoneyBillWave className={styles.icon}></FaMoneyBillWave>
-              starting from ${price}
-            </p>
-            <p>
-              <FaMap className={styles.icon}></FaMap>
-              {country}
-            </p>
-          </div>
-          <h4>starts on: {start}</h4>
-          <h4>duration : {days} days</h4>
+
+          <h4>Type: {type}</h4>
+          <h4>Duration: {time} min</h4>
+          <h4>Ingredients</h4>
+          <p className={styles.desc}>{ingredients}</p>
+          <h4>Preparation</h4>
           <p className={styles.desc}>{description}</p>
-          <h2>daily schedule</h2>
-          <div className={styles.journey}>
-            {journey.map((item, index) => {
-              return <Day key={index} day={item.day} info={item.info}></Day>
-            })}
-          </div>
-          <AniLink fade to="/tours" className="btn-primary">
-            back to tours
+          <AniLink fade to="/recipes" className="btn-primary">
+            back to recipes
           </AniLink>
         </div>
       </section>
@@ -72,18 +55,15 @@ const Template = ({ data }) => {
 
 export const query = graphql`
   query($slug: String!) {
-    tour: contentfulTour(slug: { eq: $slug }) {
+    recipe: contentfulRecipes(slug: { eq: $slug }) {
       name
-      price
-      country
-      days
-      start(formatString: "dddd MMMM Do, YYYY")
+      time
+      type
+      ingredients {
+        ingredients
+      }
       description {
         description
-      }
-      journey {
-        day
-        info
       }
       images {
         fluid {

@@ -1,22 +1,24 @@
 import React from "react"
-import Tour from "../Tours/Tour"
+import Recipe from "../Recipes/Recipe"
 import Title from "../Title"
 import styles from "../../css/items.module.css"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { useStaticQuery, graphql } from "gatsby"
 
-const getTours = graphql`
+const getRecipes = graphql`
   query {
-    featuredTours: allContentfulTour(filter: { featured: { eq: true } }) {
+    featuredRecipes: allContentfulRecipes(filter: { featured: { eq: true } }) {
       edges {
         node {
-          name
-          price
+          id
           slug
-          country
+          time
+          type
+          name
+          featured
           contentful_id
-          days
           images {
+            id
             fluid {
               ...GatsbyContentfulFluid
             }
@@ -27,22 +29,22 @@ const getTours = graphql`
   }
 `
 
-const FeaturedTours = () => {
-  const response = useStaticQuery(getTours)
-  const tours = response.featuredTours.edges
+const FeaturedRecipes = () => {
+  const response = useStaticQuery(getRecipes)
+  const recipes = response.featuredRecipes.edges
   return (
     <section className={styles.tours}>
       <Title title="featurd" subtitle="recipes"></Title>
       <div className={styles.center}>
-        {tours.map(({ node }) => {
-          return <Tour key={node.contentful_id} tour={node}></Tour>
+        {recipes.map(({ node }) => {
+          return <Recipe key={node.contentful_id} recipe={node}></Recipe>
         })}
       </div>
-      <AniLink fade to="/tours" className="btn-primary">
+      <AniLink fade to="/recipes" className="btn-primary">
         all recipes
       </AniLink>
     </section>
   )
 }
 
-export default FeaturedTours
+export default FeaturedRecipes

@@ -4,19 +4,20 @@ import Image from "gatsby-image"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const BlogCard = ({ blog }) => {
-  const { slug, title, image, published } = blog
+  const { slug, title, images, published } = blog
+  const [mainImage, ...othersImg] = images
   return (
     <article className={styles.blog}>
       <div className={styles.imgContainer}>
         <Image
-          fluid={image.fluid}
+          fluid={mainImage.fluid}
           className={styles.img}
           alt="single post"
         ></Image>
         <AniLink fade className={styles.link} to={`/blog/${slug}`}>
           read more
         </AniLink>
-        <h6 className={styles.data}>{published}</h6>
+        <h6 className={styles.date}>{published}</h6>
       </div>
       <div className={styles.footer}>
         <h4>{title}</h4>

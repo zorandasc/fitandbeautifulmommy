@@ -53,7 +53,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  text-transform: uppercase;
+  text-transform: capitalize;
   align-items: center;
   margin-top: 0.5rem;
 }
@@ -61,17 +61,17 @@
 .info h4 {
   margin-bottom: 0;
 }
-.country {
-  text-transform: capitalize;
+
+.details {
   color: var(--primaryColor);
+  text-align: right;
+}
+.time {
+  text-transform: lowercase;
+  color: var(--darkGrey);
   display: flex;
   align-items: center;
 }
 .icon {
   margin-right: 0.4rem;
-}
-.details {
-  color: var(--darkGrey);
-  text-transform: uppercase;
-  text-align: right;
 }

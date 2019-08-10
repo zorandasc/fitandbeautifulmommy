@@ -6,14 +6,14 @@ import styles from "../../css/blog.module.css"
 
 const getPosts = graphql`
   query {
-    posts: allContentfulPost(sort: { fields: published, order: DESC }) {
+    posts: allContentfulPosts(sort: { fields: published, order: DESC }) {
       edges {
         node {
           published(formatString: "MMMM Do, YYYY")
           slug
           title
           id: contentful_id
-          image {
+          images {
             fluid {
               ...GatsbyContentfulFluid
             }
