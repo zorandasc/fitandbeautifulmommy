@@ -13,7 +13,7 @@ const RecipeTemplate = ({ data }) => {
     time,
     type,
     ingredients: { ingredients },
-    description: { description },
+    preparation: { preparation },
     images,
   } = data.recipe
   const [mainImage, ...recipeImages] = images
@@ -30,20 +30,22 @@ const RecipeTemplate = ({ data }) => {
                 <Img
                   key={index}
                   fluid={item.fluid}
-                  alt="single tour"
+                  alt="single recipe"
                   className={styles.image}
                 ></Img>
               )
             })}
           </div>
           <h2>{name}</h2>
+          <div className={styles.info}>
+            <h4>Type: {type}</h4>
+            <h4>Duration: {time} min</h4>
+          </div>
 
-          <h4>Type: {type}</h4>
-          <h4>Duration: {time} min</h4>
-          <h4>Ingredients</h4>
+          <h3>Ingredients:</h3>
           <p className={styles.desc}>{ingredients}</p>
-          <h4>Preparation</h4>
-          <p className={styles.desc}>{description}</p>
+          <h3>Preparation:</h3>
+          <p className={styles.desc}>{preparation}</p>
           <AniLink fade to="/recipes" className="btn-primary">
             back to recipes
           </AniLink>
@@ -62,8 +64,8 @@ export const query = graphql`
       ingredients {
         ingredients
       }
-      description {
-        description
+      preparation {
+        preparation
       }
       images {
         fluid {
