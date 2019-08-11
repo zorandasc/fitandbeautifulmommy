@@ -43,6 +43,9 @@ p {
 
 .template h2 {
   margin: 2rem 0;
+  text-decoration: underline;
+  text-decoration-style: double;
+  text-decoration-color: var(--primaryColor);
 }
 
 .template h3 {

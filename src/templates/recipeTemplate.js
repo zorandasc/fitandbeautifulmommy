@@ -47,7 +47,7 @@ const RecipeTemplate = ({ data }) => {
           <h3>Preparation:</h3>
           <p className={styles.desc}>{preparation}</p>
           <AniLink fade to="/recipes" className="btn-primary">
-            back to recipes
+            back to all recipes
           </AniLink>
         </div>
       </section>
