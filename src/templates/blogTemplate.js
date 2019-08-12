@@ -5,6 +5,7 @@ import styles from "../css/single-blog.module.css"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import SEO from "../components/SEO"
+import StyledHero from "../components/StyledHero"
 
 export const query = graphql`
   query getPost($slug: String!) {
@@ -13,6 +14,11 @@ export const query = graphql`
       published(formatString: "MMMM Do, YYYY")
       text {
         json
+      }
+      images {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
       }
     }
   }
@@ -23,7 +29,9 @@ const BlogTemplate = ({ data }) => {
     title,
     published,
     text: { json },
+    images,
   } = data.post
+  const mainImage = images[0]
 
   const options = {
     renderNode: {
@@ -66,6 +74,7 @@ const BlogTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO title={title}></SEO>
+      <StyledHero img={mainImage.fluid}></StyledHero>
       <section className={styles.blog}>
         <div className={styles.center}>
           <h1>{title}</h1>
