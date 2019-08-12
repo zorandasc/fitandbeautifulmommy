@@ -2,7 +2,7 @@
   padding: 4rem 0;
 }
 .center {
-  width: 80vw;
+  width: 70vw;
   margin: 0 auto;
 }
 .images {
@@ -21,15 +21,16 @@
   margin-bottom: 1rem;
 }
 .info {
+  width: 70vw;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 1rem;
+  justify-content: space-between;
 }
 .info h4,
 p {
   display: flex;
   align-items: center;
-  margin-right: 8rem;
 }
 .icon {
   color: var(--primaryColor);
