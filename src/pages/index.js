@@ -18,7 +18,7 @@ export default ({ data }) => (
         title="exploring unknown"
         info="Explore and discover awsome worldwide food recipes, lifestyle and blogs from fit and beautiful mommies"
       >
-        <AniLink fade to="/tours" className="btn-white">
+        <AniLink fade to="/recipes" className="btn-white">
           explore recipes
         </AniLink>
       </Banner>
