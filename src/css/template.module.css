@@ -27,8 +27,7 @@
   margin-bottom: 1rem;
   justify-content: space-between;
 }
-.info h4,
-p {
+.info h4 {
   display: flex;
   align-items: center;
 }
@@ -40,6 +39,10 @@ p {
 .desc {
   line-height: 2;
   margin-bottom: 3rem;
+}
+
+.desc ul {
+  margin-left: 1rem;
 }
 
 .template h2 {
