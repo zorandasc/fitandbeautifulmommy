@@ -46,14 +46,17 @@
 }
 
 .template h2 {
-  margin: 2rem 0;
-  text-decoration: underline;
-  text-decoration-style: double;
-  text-decoration-color: var(--primaryColor);
+  margin: 0;
 }
 
 .template h3 {
   margin-top: 3rem;
+}
+
+.underline {
+  height: 0.2rem;
+  background: var(--primaryColor);
+  margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 992px) {

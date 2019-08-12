@@ -31,6 +31,7 @@ const RecipeTemplate = ({ data }) => {
             })}
           </div>
           <h2>{name}</h2>
+          <div className={styles.underline}></div>
           <div className={styles.info}>
             <h4>Type: {type}</h4>
             <h4>Duration: {time} min</h4>
