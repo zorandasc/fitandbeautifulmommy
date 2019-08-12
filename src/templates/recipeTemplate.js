@@ -6,14 +6,15 @@ import styles from "../css/template.module.css"
 import Img from "gatsby-image"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import SEO from "../components/SEO"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const RecipeTemplate = ({ data }) => {
   const {
     name,
     time,
     type,
-    ingredients: { ingredients },
-    preparation: { preparation },
+    ingredients: { json },
+    preparation: { json },
     images,
   } = data.recipe
   const [mainImage, ...recipeImages] = images
@@ -43,9 +44,13 @@ const RecipeTemplate = ({ data }) => {
           </div>
 
           <h3>Ingredients:</h3>
-          <p className={styles.desc}>{ingredients}</p>
+          <p className={styles.desc}>
+            {documentToReactComponents(ingredients)}
+          </p>
           <h3>Preparation:</h3>
-          <p className={styles.desc}>{preparation}</p>
+          <p className={styles.desc}>
+            {documentToReactComponents(preparation)}
+          </p>
           <AniLink fade to="/recipes" className="btn-primary">
             back to all recipes
           </AniLink>
@@ -62,10 +67,10 @@ export const query = graphql`
       time
       type
       ingredients {
-        ingredients
+        json
       }
       preparation {
-        preparation
+        json
       }
       images {
         fluid {
