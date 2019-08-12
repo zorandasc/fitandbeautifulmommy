@@ -15,7 +15,10 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
-          <img src={logo} alt="backroads logo"></img>
+          <AniLink fade to="/">
+            <img src={logo} alt="backroads logo"></img>
+          </AniLink>
+
           <button
             aria-label="hamburger menu"
             type="button"
