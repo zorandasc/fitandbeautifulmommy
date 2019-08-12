@@ -9,14 +9,7 @@ import SEO from "../components/SEO"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const RecipeTemplate = ({ data }) => {
-  const {
-    name,
-    time,
-    type,
-    ingredients: { json },
-    preparation: { json },
-    images,
-  } = data.recipe
+  const { name, time, type, ingredients, preparation, images } = data.recipe
   const [mainImage, ...recipeImages] = images
 
   return (
@@ -45,11 +38,11 @@ const RecipeTemplate = ({ data }) => {
 
           <h3>Ingredients:</h3>
           <p className={styles.desc}>
-            {documentToReactComponents(ingredients)}
+            {documentToReactComponents(ingredients.json)}
           </p>
           <h3>Preparation:</h3>
           <p className={styles.desc}>
-            {documentToReactComponents(preparation)}
+            {documentToReactComponents(preparation.json)}
           </p>
           <AniLink fade to="/recipes" className="btn-primary">
             back to all recipes
