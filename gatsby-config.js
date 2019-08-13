@@ -11,7 +11,7 @@ require("dotenv").config({
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "FitandBeautifulmommy",
+    title: "Fit and Beautiful mommy",
     description:
       "Explore and discover awsome wordwide food, lifestyle and blogs for fit and beautiful mommies",
     author: "@zorandsc",
@@ -57,7 +57,7 @@ module.exports = {
         background_color: `#f7f7f7`,
         theme_color: `#d13885`,
         display: `standalone`,
-        icon: `src/images/icon.jpg`,
+        icon: `src/images/icon.gif`,
       },
     },
     `gatsby-plugin-offline`,
