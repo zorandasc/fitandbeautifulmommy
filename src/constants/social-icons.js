@@ -3,7 +3,7 @@ import { FaFacebook, FaTwitterSquare, FaSquarespace } from "react-icons/fa"
 export default [
   {
     icon: <FaFacebook />,
-    url: "https://twitter.com/?lang=en",
+    url: "https://facebook.com/?lang=en",
   },
   {
     icon: <FaTwitterSquare />,
@@ -11,6 +11,6 @@ export default [
   },
   {
     icon: <FaSquarespace />,
-    url: "https://twitter.com/?lang=en",
+    url: "https://www.squarespace.com/?lang=en",
   },
 ]
