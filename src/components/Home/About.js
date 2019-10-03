@@ -18,6 +18,12 @@ const getAbout = graphql`
 
 const About = () => {
   const { aboutImage } = useStaticQuery(getAbout)
+  /*
+    And even if you are not
+  like us we hope you can appreciate our goals of overcoming everyday
+  hurdles trough our blogs stories, tasty and interesting recipes and
+  lifetime experience. 
+  */
 
   return (
     <section className={styles.about}>
@@ -37,10 +43,7 @@ const About = () => {
           <p>
             Our goal is not trying to reinvent the wheel or try to teach you how
             should you live your life, because in the end we are like you,
-            somebody wife, sister, lover, or mommy. And even if you are not like
-            us we hope you can appreciate our goals of overcoming everyday
-            hurdles trough our blogs stories, tasty and interesting recipes and
-            lifetime experience.
+            somebody wife, sister, daugter, or mommy.
           </p>
 
           <button type="button" className="btn-primary">
