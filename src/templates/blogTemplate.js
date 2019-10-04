@@ -60,8 +60,8 @@ const BlogTemplate = ({ data }) => {
             })}
           </div>
           <article className={styles.desc}>
-            {documentToReactComponents(text2.json)}
-            {documentToReactComponents(text3.json)}
+            {documentToReactComponents(text2["json"])}
+            {documentToReactComponents(text3["json"])}
           </article>
           <AniLink fade to="blog" className="btn-primary">
             all posts
