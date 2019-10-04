@@ -6,6 +6,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import SEO from "../components/SEO"
 import StyledHero from "../components/StyledHero"
+import Image from "gatsby-image"
 
 export const query = graphql`
   query getPost($slug: String!) {
@@ -13,6 +14,12 @@ export const query = graphql`
       title
       published(formatString: "MMMM Do, YYYY")
       text {
+        json
+      }
+      text2 {
+        json
+      }
+      text3 {
         json
       }
       images {
@@ -25,40 +32,36 @@ export const query = graphql`
 `
 
 const BlogTemplate = ({ data }) => {
-  const {
-    title,
-    published,
-    text: { json },
-    images,
-  } = data.post
-  const mainImage = images[0]
-
-  const options = {
-    renderNode: {
-      "embedded-asset-block": node => {
-        return (
-          <div>
-            <img
-              width="400"
-              src={node.data.target.fields.file["en-US"].url}
-              alt="blog"
-            ></img>
-          </div>
-        )
-      },
-    },
-  }
+  const { title, published, text, text2, text3, images } = data.post
+  const [mainImage, ...blogImages] = images
 
   return (
     <Layout>
       <SEO title={title}></SEO>
       <StyledHero img={mainImage.fluid}></StyledHero>
-      <section className={styles.blog}>
+      <section className={styles.template}>
         <div className={styles.center}>
           <h1>{title}</h1>
-          <h4>published at: {published}</h4>
-          <article className={styles.post}>
-            {documentToReactComponents(json, options)}
+          <div className={styles.underline}></div>
+          <h4>Published at: {published}</h4>
+          <article className={styles.desc}>
+            {documentToReactComponents(text.json)}
+          </article>
+          <div className={styles.images}>
+            {blogImages.map((item, index) => {
+              return (
+                <Image
+                  key={index}
+                  fluid={item.fluid}
+                  alt="blog images"
+                  className={styles.image}
+                ></Image>
+              )
+            })}
+          </div>
+          <article className={styles.desc}>
+            {documentToReactComponents(text2.json)}
+            {documentToReactComponents(text3.json)}
           </article>
           <AniLink fade to="blog" className="btn-primary">
             all posts

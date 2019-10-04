@@ -12,7 +12,7 @@ const StyledHero = ({ img, children, className, home }) => {
 
 //(100vh)100 procenta minus debljina navbara
 export default styled(StyledHero)`
-  min-height: ${props => (props.home ? "calc(100vh)" : "50vh")};
+  min-height: ${props => (props.home ? "calc(100vh)" : "70vh")};
   background: ${props =>
     props.home ? "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7))" : "none"};
   background-position: center;
