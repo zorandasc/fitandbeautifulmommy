@@ -32,14 +32,13 @@
 
 .desc {
   line-height: 2;
-
-  margin-bottom: 3rem;
+  margin: 4rem 0;
 }
 
 .underline {
   height: 0.2rem;
   background: var(--primaryColor);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 1200px) {
