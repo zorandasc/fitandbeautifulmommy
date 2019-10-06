@@ -1,0 +1,32 @@
+.container {
+  position: relative;
+  background: transparent;
+  margin: 3rem auto;
+}
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: var(--darkShadow);
+  margin: 0 auto;
+}
+.title {
+  font-size: 12px;
+  position: absolute;
+  left: 0;
+  top: 85%;
+  background: var(--primaryColor);
+  color: var(--mainBlack);
+  padding: 0 0.5rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+@media screen and (min-width: 900px) {
+  .title {
+    font-size: 1rem;
+    top: 90%;
+  }
+}
