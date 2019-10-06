@@ -17,6 +17,7 @@ export const richImage = ({ contentfulId, className }) => {
         edges {
           node {
             contentful_id
+            title
             fluid {
               ...GatsbyContentfulFluid
             }
@@ -30,7 +31,13 @@ export const richImage = ({ contentfulId, className }) => {
     edge => edge.node.contentful_id === fixId(contentfulId)
   )
 
-  return <Image className={className} fluid={image.node.fluid} />
+  return (
+    <Image
+      className={className}
+      fluid={image.node.fluid}
+      alt={image.node.title}
+    />
+  )
 }
 
 export default styled(richImage)`
