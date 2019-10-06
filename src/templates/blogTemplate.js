@@ -50,7 +50,14 @@ const BlogTemplate = ({ data }) => {
         <div className={styles.center}>
           <h1>{title}</h1>
           <div className={styles.underline}></div>
-          <h4>Published at: {published}</h4>
+          <div className={styles.info}>
+            <i>
+              <p className={styles.publish}>Published at: {published}</p>
+            </i>
+            <i>
+              <p className={styles.publish}>Created by: Lily & Nazor</p>
+            </i>
+          </div>
           <article className={styles.desc}>
             {documentToReactComponents(json, options)}
           </article>
