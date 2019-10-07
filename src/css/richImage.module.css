@@ -1,7 +1,6 @@
 .container {
   position: relative;
   background: transparent;
-  margin: 3rem auto;
 }
 .image {
   position: absolute;
@@ -25,6 +24,9 @@
 }
 
 @media screen and (min-width: 900px) {
+  .container {
+    margin: 3rem;
+  }
   .title {
     font-size: 1rem;
     top: 90%;
