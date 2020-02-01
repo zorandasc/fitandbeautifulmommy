@@ -13,11 +13,6 @@
   margin: 0 auto;
 }
 
-.desc {
-  line-height: 2;
-  margin: 4rem 0;
-}
-
 .underline {
   height: 0.2rem;
   background: var(--primaryColor);
@@ -37,6 +32,11 @@
   padding: 0.1rem 0.5rem;
   border-top-right-radius: 2rem;
   border-bottom-right-radius: 2rem;
+}
+
+.blogtext {
+  line-height: 2;
+  margin: 4rem 0;
 }
 
 @media screen and (min-width: 1200px) {

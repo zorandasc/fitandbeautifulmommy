@@ -3,56 +3,10 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import StyledHero from "../components/StyledHero"
 import styles from "../css/template.module.css"
-import Img from "gatsby-image"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import SEO from "../components/SEO"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-
-const RecipeTemplate = ({ data }) => {
-  const { name, time, type, ingredients, preparation, images } = data.recipe
-  const [mainImage, ...recipeImages] = images
-
-  return (
-    <Layout>
-      <SEO title={name}></SEO>
-      <StyledHero img={mainImage.fluid}></StyledHero>
-      <section className={styles.template}>
-        <div className={styles.center}>
-          <div className={styles.images}>
-            {recipeImages.map((item, index) => {
-              return (
-                <Img
-                  key={index}
-                  fluid={item.fluid}
-                  alt="single recipe"
-                  className={styles.image}
-                ></Img>
-              )
-            })}
-          </div>
-          <h2>{name}</h2>
-          <div className={styles.underline}></div>
-          <div className={styles.info}>
-            <h4>Type: {type}</h4>
-            <h4>Duration: {time} min</h4>
-          </div>
-
-          <h3>Ingredients:</h3>
-          <p className={styles.desc}>
-            {documentToReactComponents(ingredients.json)}
-          </p>
-          <h3>Preparation:</h3>
-          <p className={styles.desc}>
-            {documentToReactComponents(preparation.json)}
-          </p>
-          <AniLink fade to="/recipes" className="btn-primary">
-            back to all recipes
-          </AniLink>
-        </div>
-      </section>
-    </Layout>
-  )
-}
+import RichTextImage from "../components/RichTextImage"
 
 export const query = graphql`
   query($slug: String!) {
@@ -74,5 +28,54 @@ export const query = graphql`
     }
   }
 `
+
+const RecipeTemplate = ({ data }) => {
+  const { name, time, type, ingredients, preparation, images } = data.recipe
+  const mainImage = images[0]
+
+  const options = {
+    renderNode: {
+      "embedded-asset-block": node => {
+        console.log("RECIPETEMPLATE: options", node)
+        return (
+          <RichTextImage contentfulId={node.data.target.sys.id}></RichTextImage>
+        )
+      },
+    },
+  }
+
+  return (
+    <Layout>
+      <SEO title={name}></SEO>
+      <StyledHero img={mainImage.fluid}></StyledHero>
+      <section className={styles.template}>
+        <div className={styles.center}>
+          <h2>{name}</h2>
+          <div className={styles.underline}></div>
+          <div className={styles.info}>
+            <i>
+              <p className={styles.category}>Type: {type}</p>
+            </i>
+            <i>
+              <p className={styles.category}>Duration: {time} min</p>
+            </i>
+          </div>
+
+          <h3>Ingredients:</h3>
+          <article className={styles.recipetext}>
+            {documentToReactComponents(ingredients.json)}
+          </article>
+          <h3>Preparation:</h3>
+          <article className={styles.recipetext}>
+            {documentToReactComponents(preparation.json, options)}
+          </article>
+          <AniLink fade to="/recipes" className="btn-primary">
+            back to all recipes
+          </AniLink>
+        </div>
+      </section>
+    </Layout>
+  )
+}
 
 export default RecipeTemplate

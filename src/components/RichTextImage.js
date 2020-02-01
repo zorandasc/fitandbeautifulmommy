@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
-import styles from "../css/richImage.module.css"
+import styles from "../css/rich-text-image.module.css"
 
 // Gatsby adds 'c' to entity id if it starts with a number.
 function fixId(id) {
@@ -10,7 +10,7 @@ function fixId(id) {
   }
 }
 
-export const richImage = ({ contentfulId }) => {
+export const RichTextImage = ({ contentfulId }) => {
   const data = useStaticQuery(graphql`
     query {
       allContentfulAsset {
@@ -31,6 +31,7 @@ export const richImage = ({ contentfulId }) => {
     edge => edge.node.contentful_id === fixId(contentfulId)
   )
 
+  console.log("Richtextimage find image", image)
   return (
     <div className={styles.container}>
       <Image
@@ -43,4 +44,4 @@ export const richImage = ({ contentfulId }) => {
   )
 }
 
-export default richImage
+export default RichTextImage

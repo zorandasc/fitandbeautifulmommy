@@ -6,7 +6,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import SEO from "../components/SEO"
 import StyledHero from "../components/StyledHero"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import RichImage from "../components/rixhImage"
+import RichTextImage from "../components/RichTextImage"
 
 export const query = graphql`
   query getPost($slug: String!) {
@@ -37,7 +37,9 @@ const BlogTemplate = ({ data }) => {
   const options = {
     renderNode: {
       "embedded-asset-block": node => {
-        return <RichImage contentfulId={node.data.target.sys.id}></RichImage>
+        return (
+          <RichTextImage contentfulId={node.data.target.sys.id}></RichTextImage>
+        )
       },
     },
   }
@@ -58,7 +60,7 @@ const BlogTemplate = ({ data }) => {
               <p className={styles.publish}>Created by: Lily & Nazor</p>
             </i>
           </div>
-          <article className={styles.desc}>
+          <article className={styles.blogtext}>
             {documentToReactComponents(json, options)}
           </article>
           <AniLink fade to="blog" className="btn-primary">
