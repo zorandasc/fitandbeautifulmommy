@@ -1,17 +1,22 @@
-.tour {
+.recipebox {
+  display: flex;
+  flex-direction: column;
   box-shadow: var(--lightShadow);
   transition: var(--mainTransition);
 }
-.tour:hover {
+.recipebox:hover {
   box-shadow: var(--darkShadow);
 }
 
 .img-container {
+  flex: 1 1 auto;
   position: relative;
   background: var(--primaryColor);
   transition: var(--mainTransition);
+  margin-bottom: 0.5rem;
 }
 .img {
+  height: 100%;
   transition: var(--mainTransition);
 }
 .img-container:hover .img {
@@ -42,36 +47,24 @@
 }
 
 .footer {
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 6.7rem;
   text-align: left;
-}
-.footer h3 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.5rem;
   text-transform: capitalize;
-  margin-bottom: 0;
 }
+
 .info {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  text-transform: capitalize;
-  align-items: center;
-  margin-top: 0.5rem;
-}
-.info h6,
-.info h4 {
-  margin-bottom: 0;
+  color: var(--primaryColor);
 }
 
-.details {
-  color: var(--primaryColor);
-  text-align: right;
-}
-.time {
-  text-transform: lowercase;
-  color: var(--darkGrey);
-  display: flex;
-  align-items: center;
-}
-.icon {
-  margin-right: 0.4rem;
+.info h4 {
+  margin-bottom: 0;
 }

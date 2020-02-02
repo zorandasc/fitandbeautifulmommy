@@ -9,7 +9,7 @@ const Recipe = ({ recipe }) => {
   let mainImage = images[0].fluid
 
   return (
-    <article className={styles.tour}>
+    <article className={styles.recipebox}>
       <div className={styles.imgContainer}>
         <Image fluid={mainImage} className={styles.img}></Image>
         <AniLink fade className={styles.link} to={`/recipes/${slug}`}>
@@ -19,13 +19,10 @@ const Recipe = ({ recipe }) => {
       <div className={styles.footer}>
         <h3>{name}</h3>
         <div className={styles.info}>
-          <div className={styles.details}>
+          <div>
             <h4>{type}</h4>
           </div>
-          <h4 className={styles.time}>
-            <FaClock className={styles.icon}></FaClock>
-            {time} min
-          </h4>
+          <h4>{time} min</h4>
         </div>
       </div>
     </article>
