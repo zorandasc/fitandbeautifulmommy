@@ -42,6 +42,7 @@
 .nav-social-links {
   display: none;
 }
+
 @media screen and (min-width: 576px) {
   .navbar {
     padding: 0 2rem;

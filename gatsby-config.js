@@ -55,7 +55,7 @@ module.exports = {
         short_name: `FitandBeautifulmommy`,
         start_url: `/`,
         background_color: `#f7f7f7`,
-        theme_color: `#d13885`,
+        theme_color: `#2892d7`,
         display: `standalone`,
         icon: `src/images/icon.gif`,
       },

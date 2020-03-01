@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Layout from "../components/Layout"
+import Layout1 from "../components/Layout1"
 import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
 import Recipes from "../components/Recipes/Recipes"
@@ -8,13 +8,13 @@ import SEO from "../components/SEO"
 export default class recipes extends Component {
   render() {
     return (
-      <Layout>
+      <Layout1>
         <SEO title="Recipes"></SEO>
         <StyledHero
           img={this.props.data.defaultBcg.childImageSharp.fluid}
         ></StyledHero>
         <Recipes></Recipes>
-      </Layout>
+      </Layout1>
     )
   }
 }

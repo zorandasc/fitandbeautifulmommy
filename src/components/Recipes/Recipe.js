@@ -2,7 +2,6 @@ import React from "react"
 import styles from "../../css/recipe.module.css"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Image from "gatsby-image"
-import { FaClock } from "react-icons/fa"
 
 const Recipe = ({ recipe }) => {
   const { name, type, time, slug, images } = recipe
@@ -22,6 +21,7 @@ const Recipe = ({ recipe }) => {
           <div>
             <h4>{type}</h4>
           </div>
+
           <h4>{time} min</h4>
         </div>
       </div>

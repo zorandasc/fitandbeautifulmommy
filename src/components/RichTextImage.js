@@ -31,7 +31,6 @@ export const RichTextImage = ({ contentfulId }) => {
     edge => edge.node.contentful_id === fixId(contentfulId)
   )
 
-  console.log("Richtextimage find image", image)
   return (
     <div className={styles.container}>
       <Image

@@ -36,7 +36,6 @@ const RecipeTemplate = ({ data }) => {
   const options = {
     renderNode: {
       "embedded-asset-block": node => {
-        console.log("RECIPETEMPLATE: options", node)
         return (
           <RichTextImage contentfulId={node.data.target.sys.id}></RichTextImage>
         )

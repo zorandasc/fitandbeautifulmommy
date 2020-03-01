@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/Layout"
+import Layout1 from "../components/Layout1"
 import Banner from "../components/Banner"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import About from "../components/Home/About"
@@ -11,7 +11,7 @@ import RecentBlogs from "../components/Home/ReacentBlogs"
 import SEO from "../components/SEO"
 
 export default ({ data }) => (
-  <Layout>
+  <Layout1>
     <SEO title="Home" description="this is home description"></SEO>
     <StyledHero home="true" img={data.defaultBcg.childImageSharp.fluid}>
       <Banner
@@ -26,7 +26,7 @@ export default ({ data }) => (
     <FeaturedRecipes></FeaturedRecipes>
     <RecentBlogs></RecentBlogs>
     <About></About>
-  </Layout>
+  </Layout1>
 )
 
 export const query = graphql`
