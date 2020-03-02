@@ -1,6 +1,6 @@
 import React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import logo from "../images/optimised.svg"
+import logo from "../images/optimised1.svg"
 import styles from "../css/navbar1.module.css"
 import links from "../constants/links"
 import icons from "../constants/social-icons1"

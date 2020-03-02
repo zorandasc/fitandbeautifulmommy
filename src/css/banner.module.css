@@ -2,9 +2,10 @@
   text-align: center;
   letter-spacing: var(--mainSpacing);
   color: var(--mainWhite);
+  margin: 0 auto;
 }
 .banner h1 {
-  font-size: 3.3rem;
+  font-size: 3rem;
   text-transform: uppercase;
   margin-bottom: 2rem;
   padding: 0 1rem;
