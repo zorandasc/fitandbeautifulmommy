@@ -16,7 +16,7 @@ const BlogCard = ({ blog }) => {
           alt="single post"
         ></Image>
         <AniLink fade className={styles.link} to={`/blog/${slug}`}>
-          read more
+          let's dig in
         </AniLink>
         <p className={styles.date}>{published}</p>
       </div>
