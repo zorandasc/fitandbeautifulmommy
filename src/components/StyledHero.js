@@ -4,7 +4,13 @@ import BacgroundImage from "gatsby-background-image"
 
 const StyledHero = ({ img, children, className, home }) => {
   return (
-    <BacgroundImage className={className} fluid={img} home={home}>
+    <BacgroundImage
+      className={className}
+      fluid={img}
+      home={home}
+      fadeIn={false}
+      loading="eager"
+    >
       {children}
     </BacgroundImage>
   )
