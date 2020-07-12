@@ -23,7 +23,7 @@
 .about-img div {
   box-shadow: var(--lightShadow);
 }
-.about-info h4 {
+.about-info h3 {
   font-size: 1.9rem;
   text-transform: uppercase;
 }

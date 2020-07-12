@@ -21,7 +21,7 @@ const Navbar1 = () => {
       >
         <div className={styles.center}>
           <AniLink to="/">
-            <img src={logo} alt="fitandbeatiful momy logo"></img>
+            <img src={logo} alt="fitandbeatiful mommy logo"></img>
           </AniLink>
           <ul className={styles.links}>
             {links.map(link => {
