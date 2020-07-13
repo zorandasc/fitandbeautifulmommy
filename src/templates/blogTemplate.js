@@ -32,6 +32,7 @@ const BlogTemplate = ({ data }) => {
     images,
     text: { json },
   } = data.post
+
   const mainImage = images[0]
 
   const options = {
