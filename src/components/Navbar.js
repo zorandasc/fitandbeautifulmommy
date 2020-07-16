@@ -1,68 +1,82 @@
-import React, { useState } from "react"
-import styles from "../css/navbar.module.css"
-import { FaAlignRight } from "react-icons/fa"
-import links from "../constants/links"
-import socialIcons from "../constants/social-icons"
+import React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import logo from "../images/optimised.svg"
+import logo from "../images/optimised1.svg"
+import styles from "../css/navbar.module.css"
+import links from "../constants/links"
+import icons from "../constants/social-icons1"
+import { FaAlignRight } from "react-icons/fa"
+import { AppContext } from "../context"
 
-const Navbar = () => {
-  const [isOpen, setNav] = useState(false)
-  const toggleNav = () => {
-    setNav(isOpen => !isOpen)
-  }
-  return (
-    <nav className={styles.navbar}>
-      <div className={styles.navCenter}>
-        <div className={styles.navHeader}>
-          <AniLink fade to="/">
-            <img src={logo} alt="backroads logo"></img>
+const Navbar1 = () => {
+  const { size, handleOpenSidebar, height } = React.useContext(AppContext)
+
+  if (size > 992) {
+    return (
+      <nav
+        className={
+          height < 80
+            ? `${styles.navbar}`
+            : `${styles.navbar} ${styles.navbarFixed}`
+        }
+      >
+        <div className={styles.center}>
+          <AniLink to="/">
+            <img src={logo} alt="fitandbeatiful mommy logo"></img>
           </AniLink>
-
+          <ul className={styles.links}>
+            {links.map(link => {
+              return (
+                <li key={link.id}>
+                  <AniLink to={link.path} className={styles.navLink}>
+                    {link.text}
+                  </AniLink>
+                </li>
+              )
+            })}
+          </ul>
+          <div className={styles.icons}>
+            {icons.map(icon => {
+              return (
+                <a
+                  key={icon.id}
+                  href={icon.url}
+                  className={styles.navIcon}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="socials links"
+                >
+                  {icon.icon}
+                </a>
+              )
+            })}
+          </div>
+        </div>
+      </nav>
+    )
+  } else {
+    return (
+      <nav
+        className={
+          height < 80
+            ? `${styles.navbar}`
+            : `${styles.navbar} ${styles.navbarFixed}`
+        }
+      >
+        <div className={styles.header}>
+          <AniLink to="/">
+            <img src={logo} alt="fitandbeatiful momy logo"></img>
+          </AniLink>
           <button
-            aria-label="hamburger menu"
             type="button"
-            className={styles.logoBtn}
-            onClick={toggleNav}
+            className={styles.toggleBtn}
+            onClick={handleOpenSidebar}
           >
-            <FaAlignRight className={styles.logoIcon}></FaAlignRight>
+            menu<FaAlignRight className={styles.toggleIcon}></FaAlignRight>
           </button>
         </div>
-        <ul
-          className={
-            isOpen
-              ? `${styles.navLinks} ${styles.showNav}`
-              : `${styles.navLinks}`
-          }
-        >
-          {links.map((item, index) => {
-            return (
-              <li key={index}>
-                <AniLink fade to={item.path}>
-                  {item.text}
-                </AniLink>
-              </li>
-            )
-          })}
-        </ul>
-        <div className={styles.navSocialLinks}>
-          {socialIcons.map((item, index) => {
-            return (
-              <a
-                key={index}
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="socials links"
-              >
-                {item.icon}
-              </a>
-            )
-          })}
-        </div>
-      </div>
-    </nav>
-  )
+      </nav>
+    )
+  }
 }
 
-export default Navbar
+export default Navbar1

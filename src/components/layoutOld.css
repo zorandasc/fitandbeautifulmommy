@@ -1,13 +1,15 @@
-@import url("https://fonts.googleapis.com/css?family=Catamaran:400,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
 :root {
-  --primaryColor: #1a6ba1;
+  --primaryColor: #2892d7;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
   --mainBlack: #222;
   --mainGrey: #ececec;
   --darkGrey: #afafaf;
   --mainTransition: all 0.3s linear;
-  --mainSpacing: 0.3rem;
+  --mainSpacing: 4px;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
@@ -19,32 +21,31 @@
 }
 
 body {
-  font-family: "Catamaran", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  font-display: auto;
   color: var(--mainBlack);
-  background: var(--mainGrey);
-  line-height: 1.4;
+  background: var(--mainWhite);
+  line-height: 1.5;
   font-size: 1rem;
 }
+p,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Catamaran", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing);
 }
 p {
   margin-bottom: 1.25rem;
 }
-ul {
-  list-style-type: none;
-}
 a {
   text-decoration: none;
-  color: var(--mainBlack);
 }
+
 .btn-white,
 .btn-primary {
   text-transform: uppercase;
@@ -55,7 +56,6 @@ a {
   display: inline-block;
   transition: var(--mainTransition);
   cursor: pointer;
-  font-size: 0.8rem;
 }
 .btn-white:hover {
   background: var(--mainWhite);
@@ -70,23 +70,12 @@ a {
   background: transparent;
   color: var(--primaryColor);
 }
-
-.facebook-icon {
-  color: #3b5998;
-}
-.pinterest-icon {
-  color: #c8232c;
-}
-.instagram-icon {
-  color: #833ab4;
-}
-.background {
-  min-height: calc(100vh - 5rem);
-  background-position: center;
-  background-size: cover;
-  opacity: 1 !important;
+/* .gatsby-image-wrapper {
+  max-height: 600px;
+  box-shadow: var(--lightShadow);
+} */
+main {
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(34, 34, 34, 0.6);
+  flex-direction: column;
 }

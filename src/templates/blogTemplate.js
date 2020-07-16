@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout1 from "../components/Layout1"
+import Layout from "../components/Layout"
 import styles from "../css/single-blog.module.css"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import SEO from "../components/SEO"
@@ -52,7 +52,7 @@ const BlogTemplate = ({ data }) => {
   }
 
   return (
-    <Layout1>
+    <Layout>
       <SEO title={title}></SEO>
       <StyledHero img={heroImage.fluid}></StyledHero>
       <section className={styles.template}>
@@ -75,7 +75,7 @@ const BlogTemplate = ({ data }) => {
           </AniLink>
         </div>
       </section>
-    </Layout1>
+    </Layout>
   )
 }
 

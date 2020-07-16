@@ -29,7 +29,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-transition-link`,
-    `gatsby-plugin-playground`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     {
@@ -38,6 +37,17 @@ module.exports = {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         // Learn about environment variables: https://gatsby.dev/env-vars
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Catamaran`,
+            variants: [`400`, `500`],
+          },
+        ],
       },
     },
     {
