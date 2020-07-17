@@ -70,7 +70,7 @@ const BlogTemplate = ({ data }) => {
           <article className={styles.blogtext}>
             {documentToReactComponents(json, options)}
           </article>
-          <AniLink fade to="blog" className="btn-primary">
+          <AniLink fade to="/blog" className="btn-primary">
             all posts
           </AniLink>
         </div>
