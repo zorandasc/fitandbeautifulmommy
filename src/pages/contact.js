@@ -1,5 +1,5 @@
 import React from "react"
-import Layout1 from "../components/Layout1"
+import Layout from "../components/Layout"
 import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
 import Contact from "../components/Contact/Contact"
@@ -7,11 +7,11 @@ import SEO from "../components/SEO"
 
 export default function contact({ data }) {
   return (
-    <Layout1>
+    <Layout>
       <SEO title="Contact"></SEO>
       <StyledHero img={data.connectBcg.childImageSharp.fluid}></StyledHero>
       <Contact></Contact>
-    </Layout1>
+    </Layout>
   )
 }
 

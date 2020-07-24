@@ -4,7 +4,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--darkGrey);
+  background: var(--primaryColor);
+
   z-index: 2;
   opacity: 1;
   transition: var(--mainTransition);
@@ -32,16 +33,15 @@
   align-items: center;
   transition: var(--mainTransition);
   cursor: pointer;
-  color: var(--mainBlack);
+  color: var(--mainWhite);
   outline-color: var(--primaryColor);
   background: transparent;
 }
 .closeIcon {
-  margin-left: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
 }
 .closeBtn:hover {
-  color: var(--primaryColor);
+  color: var(--mainBlack);
 }
 .linksContainer {
   margin-top: -4.875rem;
@@ -57,10 +57,14 @@
   padding: 0.2rem 3rem;
   margin: 0.5rem 0;
   text-align: center;
+  color: var(--mainWhite);
   letter-spacing: var(--mainSpacing);
   transition: var(--mainTransition);
+  border-bottom: 0.2rem solid var(--mainWhite);
 }
-.link:hover {
+.link:hover,
+.link:focus {
   padding-left: 3.5rem;
-  color: var(--primaryColor);
+  color: var(--mainBlack);
+  transform: translateX(8px);
 }
