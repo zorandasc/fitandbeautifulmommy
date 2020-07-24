@@ -53,7 +53,12 @@
   background: transparent;
 }
 .toggleIcon {
+<<<<<<< HEAD
   font-size: 1.8rem;
+=======
+  margin-left: 0.5rem;
+  font-size: 1.3rem;
+>>>>>>> 50b3966865a4e7421e9131f04a695e7d66728281
 }
 .toggleBtn:hover {
   color: var(--primaryColor);

@@ -18,8 +18,8 @@ const getPosts = graphql`
           title
           id: contentful_id
           images {
-            fluid {
-              ...GatsbyContentfulFluid
+            fluid(maxWidth: 800) {
+              ...GatsbyContentfulFluid_withWebp
             }
           }
         }

@@ -39,7 +39,7 @@ const About = () => {
           </div>
         </article>
         <article className={styles.aboutInfo}>
-          <h4>who are we</h4>
+          <h3>who are we</h3>
           <p>
             Our goal is not trying to reinvent the wheel or try to teach you how
             should you live your life, because in the end we are like you,

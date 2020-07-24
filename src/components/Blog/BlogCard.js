@@ -16,12 +16,12 @@ const BlogCard = ({ blog }) => {
           alt="single post"
         ></Image>
         <AniLink fade className={styles.link} to={`/blog/${slug}`}>
-          read more
+          let's dig in
         </AniLink>
-        <h6 className={styles.date}>{published}</h6>
+        <p className={styles.date}>{published}</p>
       </div>
       <div className={styles.footer}>
-        <h4>{title}</h4>
+        <h3>{title}</h3>
       </div>
     </article>
   )

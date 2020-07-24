@@ -7,6 +7,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import SEO from "../components/SEO"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import RichTextImage from "../components/RichTextImage"
+import { getFluidGatsbyImage } from "../tools/getFluidGatsbyImage"
 
 export const query = graphql`
   query($slug: String!) {
@@ -20,9 +21,9 @@ export const query = graphql`
       preparation {
         json
       }
-      images {
+      heroImage {
         fluid {
-          ...GatsbyContentfulFluid
+          ...GatsbyContentfulFluid_withWebp
         }
       }
     }
@@ -30,15 +31,21 @@ export const query = graphql`
 `
 
 const RecipeTemplate = ({ data }) => {
-  const { name, time, type, ingredients, preparation, images } = data.recipe
-  const mainImage = images[0]
+  const { name, time, type, ingredients, preparation, heroImage } = data.recipe
 
   const options = {
     renderNode: {
       "embedded-asset-block": node => {
-        return (
-          <RichTextImage contentfulId={node.data.target.sys.id}></RichTextImage>
-        )
+        if (node.data.target) {
+          const { file, title } = node.data.target.fields
+
+          const image = {
+            file: file["en-US"],
+          }
+
+          const fluidProps = getFluidGatsbyImage(image, {})
+          return <RichTextImage fluid={fluidProps} title={title["en-US"]} />
+        }
       },
     },
   }
@@ -46,7 +53,7 @@ const RecipeTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO title={name}></SEO>
-      <StyledHero img={mainImage.fluid}></StyledHero>
+      <StyledHero img={heroImage.fluid}></StyledHero>
       <section className={styles.template}>
         <div className={styles.center}>
           <h2>{name}</h2>
