@@ -40,6 +40,12 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-preconnect",
+      options: {
+        domains: ["https://images.ctfassets.net"],
+      },
+    },
+    {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
