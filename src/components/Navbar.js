@@ -70,6 +70,7 @@ const Navbar = () => {
             type="button"
             className={styles.toggleBtn}
             onClick={handleOpenSidebar}
+            aria-label="Menu button"
           >
             <FaAlignRight className={styles.toggleIcon}></FaAlignRight>
           </button>
