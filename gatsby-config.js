@@ -31,6 +31,7 @@ module.exports = {
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-preload-link-crossorigin`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -40,6 +41,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-preact`,
+
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
