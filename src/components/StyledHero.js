@@ -8,8 +8,8 @@ const StyledHero = ({ img, children, className, home }) => {
       className={className}
       fluid={img}
       home={home}
-      fadeIn={false}
-      loading="eager"
+      fadeIn={home ? false : true}
+      loading={home ? "eager" : "lazy"}
     >
       {children}
     </BacgroundImage>
