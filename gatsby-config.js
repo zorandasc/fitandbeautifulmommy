@@ -39,17 +39,7 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Catamaran`,
-            variants: [`400`, `500`],
-          },
-        ],
-      },
-    },
+    `gatsby-plugin-preact`,
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {

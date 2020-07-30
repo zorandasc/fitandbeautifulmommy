@@ -49,6 +49,7 @@
 .footer h3 {
   text-transform: capitalize;
   margin-bottom: 0;
+  font-size: 1rem;
 }
 .date {
   position: absolute;
@@ -59,4 +60,11 @@
   padding: 0.4rem 0.5rem;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 628px) {
+  .date {
+    font-size: 1rem;
+  }
 }

@@ -14,7 +14,7 @@ const Title = ({ title, subtitle, className }) => {
 
 export default styled(Title)`
   text-transform: uppercase;
-  font-size: 2.3rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
   h2 {
     text-align: center;
@@ -28,6 +28,7 @@ export default styled(Title)`
     display: block;
   }
   @media (min-width: 576px) {
+    font-size: 2.3rem;
     span {
       display: inline-block;
       margin: 0 0.35rem;

@@ -21,7 +21,7 @@
 }
 
 body {
-  font-family: "Catamaran", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: var(--mainBlack);
   background: var(--mainGrey);
   line-height: 1.4;
@@ -33,7 +33,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Catamaran", sans-serif;
+  font-family: "Times New Roman", Times, serif;
   margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing);
 }

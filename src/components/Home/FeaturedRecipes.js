@@ -33,7 +33,7 @@ const FeaturedRecipes = () => {
   const response = useStaticQuery(getRecipes)
   const recipes = response.featuredRecipes.edges
   return (
-    <section className={styles.tours}>
+    <section className={styles.recipes}>
       <Title title="featurd" subtitle="recipes"></Title>
       <div className={styles.center}>
         {recipes.map(({ node }) => {

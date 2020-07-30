@@ -1,7 +1,14 @@
-.tours {
+.recipes {
   padding: 4rem 0;
   text-align: center;
 }
+
+.blogs {
+  padding: 4rem 0;
+  text-align: center;
+  background-color: var(--mainGrey);
+}
+
 .center {
   width: 80vw;
   margin: 3rem auto;

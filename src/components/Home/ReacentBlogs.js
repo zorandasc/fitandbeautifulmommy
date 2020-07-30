@@ -31,7 +31,7 @@ const getPosts = graphql`
 const RecentBlogs = () => {
   const { posts } = useStaticQuery(getPosts)
   return (
-    <section className={styles.tours} style={{ background: "var(--mainGrey)" }}>
+    <section className={styles.blogs}>
       <Title title="recent" subtitle="blogs"></Title>
       <div className={styles.center}>
         {posts.edges.map(({ node }) => {
