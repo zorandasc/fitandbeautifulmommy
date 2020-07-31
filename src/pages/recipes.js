@@ -23,7 +23,7 @@ export const query = graphql`
   query {
     defaultBcg: file(relativePath: { eq: "cook.jpg" }) {
       childImageSharp {
-        fluid(quality: 90, maxWidth: 4160) {
+        fluid {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

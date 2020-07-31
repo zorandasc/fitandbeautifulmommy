@@ -17,9 +17,8 @@ const getRecipes = graphql`
           name
           featured
           contentful_id
-          images {
-            id
-            fluid(maxWidth: 800) {
+          heroImage {
+            fluid {
               ...GatsbyContentfulFluid_withWebp
             }
           }

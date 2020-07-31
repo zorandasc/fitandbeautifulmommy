@@ -36,7 +36,6 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
-        // Learn about environment variables: https://gatsby.dev/env-vars
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
@@ -60,6 +59,7 @@ module.exports = {
         theme_color: `#2892d7`,
         display: `standalone`,
         icon: `src/images/icon.gif`,
+        icon_options: { purpose: `maskable` },
       },
     },
     `gatsby-plugin-offline`,

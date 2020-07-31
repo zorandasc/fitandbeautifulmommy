@@ -4,13 +4,12 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Image from "gatsby-image"
 
 const Recipe = ({ recipe }) => {
-  const { name, type, time, slug, images } = recipe
-  let mainImage = images[0].fluid
+  const { name, type, time, slug, heroImage } = recipe
 
   return (
     <article className={styles.recipebox}>
       <div className={styles.imgContainer}>
-        <Image fluid={mainImage} className={styles.img}></Image>
+        <Image fluid={heroImage.fluid} className={styles.img}></Image>
         <AniLink fade className={styles.link} to={`/recipes/${slug}`}>
           details
         </AniLink>
