@@ -25,7 +25,7 @@ const Sidebar = () => {
         }
       >
         <button onClick={handleCloseSidebar} className={styles.closeBtn}>
-          close <FaTimes className={styles.closeIcon}></FaTimes>
+          <FaTimes className={styles.closeIcon}></FaTimes>
         </button>
       </header>
       <section className={styles.linksContainer}>

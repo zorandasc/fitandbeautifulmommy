@@ -1,37 +1,31 @@
 .sidebar {
   position: fixed;
   top: 0;
-  left: 0;
+  width: 80%;
   right: 0;
   bottom: 0;
   background: var(--primaryColor);
-
-  z-index: 2;
+  z-index: 10;
   opacity: 1;
   transition: var(--mainTransition);
 }
 .closeSidebar {
-  transform: translateX(-100%);
+  transform: translateX(100%);
   opacity: 0;
-  z-index: 0;
 }
 .header {
-  padding: 2rem 2rem;
+  padding: 1.5rem;
   display: flex;
   justify-content: flex-end;
 }
 .movingHeader {
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
 }
 
 .closeBtn {
+  z-index: 20;
   border: none;
-  display: inline-block;
-  text-transform: capitalize;
   font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  transition: var(--mainTransition);
   cursor: pointer;
   color: var(--mainWhite);
   outline-color: var(--primaryColor);
@@ -40,9 +34,7 @@
 .closeIcon {
   font-size: 1.8rem;
 }
-.closeBtn:hover {
-  color: var(--mainBlack);
-}
+
 .linksContainer {
   margin-top: -4.875rem;
   min-height: 100vh;
@@ -64,7 +56,5 @@
 }
 .link:hover,
 .link:focus {
-  padding-left: 3.5rem;
-  color: var(--mainBlack);
-  transform: translateX(8px);
+  transform: scale(1.2);
 }

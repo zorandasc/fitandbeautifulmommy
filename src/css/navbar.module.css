@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   background: var(--mainWhite);
-  z-index: 1;
+  z-index: 5;
   transition: all 0.5s;
 }
 .navbarFixed {
@@ -41,12 +41,10 @@
 }
 
 .toggleBtn {
+  z-index: 5;
   border: none;
   text-transform: capitalize;
   font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  transition: var(--mainTransition);
   cursor: pointer;
   color: var(--mainBlack);
   outline-color: var(--primaryColor);
@@ -55,9 +53,7 @@
 .toggleIcon {
   font-size: 1.8rem;
 }
-.toggleBtn:hover {
-  color: var(--primaryColor);
-}
+
 .links {
   display: flex;
   flex-wrap: wrap;
@@ -85,6 +81,5 @@
   transition: var(--mainTransition);
 }
 .navIcon:hover {
-  color: var(--mainBlack);
   transform: translateY(-10%);
 }
